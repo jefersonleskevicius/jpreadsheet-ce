@@ -10677,8 +10677,6 @@ if (! jSuites && typeof(require) === 'function') {
          */
         obj.updateTableReferences = function() {
            
-            obj.setData();
-            
             // Update headers
             for (var i = 0; i < obj.headers.length; i++) {
                 var x = obj.headers[i].getAttribute('data-x');
@@ -10792,6 +10790,8 @@ if (! jSuites && typeof(require) === 'function') {
 
             // Update table with custom configuration if applicable
             obj.updateTable();
+            
+            obj.setData();
         }
 
         /**
